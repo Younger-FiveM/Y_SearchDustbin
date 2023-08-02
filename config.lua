@@ -27,6 +27,6 @@ Config.AllowedDustbinProps = { -- Add name props dustbin in GTA
     "prop_dumpster_4b",
 }
 
-Config.Range = 2,
+Config.Range = 1,
 
 Config.KeysSearch = Keys["E"] -- Key for search in dustbin "E"
