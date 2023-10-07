@@ -12,7 +12,7 @@ local Keys = {
 
 Config = {}
 
-Config.OldESX = true
+Config.OldESX = false
 
 Config.AllowedDustbinProps = { -- Add name props dustbin in GTA
     "prop_bin_14a",
@@ -27,6 +27,28 @@ Config.AllowedDustbinProps = { -- Add name props dustbin in GTA
     "prop_dumpster_4b",
 }
 
-Config.Range = 1,
+Config.Range = 5
 
-Config.KeysSearch = Keys["E"] -- Key for search in dustbin "E"
+-- Config.SearchDuration = 10
+
+Config.CooldownTime = 3600 -- Cooldown time in seconds 
+
+-- Config.KeysSearch = Keys["E"] -- Key for search in dustbin "E"
+
+Config.BinLootChance = 80 -- Chance to find something in the dustbin
+
+-- Config.SearchAnimationDict = "amb@prop_human_bum_bin@idle_b" -- Animation Dict
+-- Config.SearchAnimationName = "idle_d"
+
+-- Config.Language = {
+--   -- Translate in French
+--   [1] = "Vous avez fouillé la poubelle !",
+--   [2] = "Vous ne pouvez pas fouiller une poubelle pour le moment. Attendez ",
+--   [3] = " secondes.",
+--   [4] = "Fouille dans la poubelle",
+--   -- Translate in English
+--   [5] = "You searched the dustbin !",
+--   [6] = "You cannot search a dustbin right now. Wait ",
+--   [7] = " seconds",
+--   [8] = "Rummage through the dustbin",
+-- }

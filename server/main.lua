@@ -1,6 +1,7 @@
 ------------------------------------------------------------
 local ESX = nil
 local PlayerData = nil
+
 if Config.OldESX then
 	ESX = nil
 	Citizen.CreateThread(function(spawnPoint)
@@ -14,4 +15,12 @@ else
 	ESX = exports['es_extended']:getSharedObject()
 end
 
+-- ESX = exports['es_extended']:getSharedObject()
 ------------------------------------------------------------
+
+-- Define the function to add an item to the player's inventory
+RegisterServerEvent('esx:addInventoryItem')
+AddEventHandler('esx:addInventoryItem', function(itemName, count)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    xPlayer.addInventoryItem(itemName, count)
+end)
