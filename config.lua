@@ -12,8 +12,6 @@ local Keys = {
 
 Config = {}
 
-Config.OldESX = false
-
 Config.AllowedDustbinProps = { -- Add name props dustbin in GTA
     "prop_bin_14a",
     "prop_bin_07c",
@@ -27,7 +25,7 @@ Config.AllowedDustbinProps = { -- Add name props dustbin in GTA
     "prop_dumpster_4b",
 }
 
-Config.Range = 5
+Config.Range = 2
 
 -- Config.SearchDuration = 10
 

@@ -1,20 +1,20 @@
 ------------------------------------------------------------
-local ESX = nil
-local PlayerData = nil
+-- local ESX = nil
+-- local PlayerData = nil
 
-if Config.OldESX then
-	ESX = nil
-	Citizen.CreateThread(function(spawnPoint)
-		while ESX == nil do
-			TriggerEvent('esx:getSharedObject8', function(obj) ESX = obj end)
-			Citizen.Wait(1000)
-		end
-        ESX.PlayerData = ESX.GetPlayerData()
-	end)
-else
-	ESX = exports['es_extended']:getSharedObject()
-end
--- ESX = exports['es_extended']:getSharedObject()
+-- if Config.OldESX then
+-- 	ESX = nil
+-- 	Citizen.CreateThread(function(spawnPoint)
+-- 		while ESX == nil do
+-- 			TriggerEvent('esx:getSharedObject8', function(obj) ESX = obj end)
+-- 			Citizen.Wait(1000)
+-- 		end
+--         ESX.PlayerData = ESX.GetPlayerData()
+-- 	end)
+-- else
+-- 	ESX = exports['es_extended']:getSharedObject()
+-- end
+ESX = exports['es_extended']:getSharedObject()
 ------------------------------------------------------------
 --------------------------FONCTION--------------------------
 local binCooldowns = {}
@@ -73,9 +73,10 @@ function checkBinSearch()
 
 			-- Add the loot to the player's inventory
                         TriggerServerEvent('esx:addInventoryItem', lootType, 1)
-
+                        
 			-- Set the bin on cooldown
                         binCooldowns[binCoords] = GetGameTimer()
+
                         lib.notify({
                             title = 'Notification title',
                             description = 'Vous avez trouvé ' .. lootType .. ' dans la poubelle !',
